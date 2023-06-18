@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://caub4s3sm6tg0"]
+
+[ext_resource type="Texture2D" uid="uid://b3xwppslfcxvc" path="res://assets/PNG/Dark/texture_02.png" id="1_2lwre"]
+[ext_resource type="PackedScene" uid="uid://cdw7dqbun7qpx" path="res://player.tscn" id="2_8e2bk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qcfid"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_fsnc4"]
+sky_material = SubResource("ProceduralSkyMaterial_qcfid")
+
+[sub_resource type="Environment" id="Environment_3alb4"]
+background_mode = 2
+sky = SubResource("Sky_fsnc4")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4y7s"]
+albedo_texture = ExtResource("1_2lwre")
+uv1_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ptn2n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pne6x"]
+
+[node name="main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3alb4")
+
+[node name="flooor" type="CSGMesh3D" parent="."]
+transform = Transform3D(21.576, 0, 0, 0, 1, 0, 0, 0, 17.3135, -0.000191689, 0, 0.0128856)
+material_override = SubResource("StandardMaterial3D_t4y7s")
+use_collision = true
+mesh = SubResource("PlaneMesh_ptn2n")
+
+[node name="player" parent="." instance=ExtResource("2_8e2bk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07788, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64186, 0.581111, 4.50646)
+use_collision = true
+mesh = SubResource("BoxMesh_pne6x")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.581111, 4.50646)
+use_collision = true
+mesh = SubResource("BoxMesh_pne6x")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64186, 0.581111, 8.1737)
+use_collision = true
+mesh = SubResource("BoxMesh_pne6x")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43577, 0.618393, 8.1737)
+use_collision = true
+mesh = SubResource("BoxMesh_pne6x")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493125, 2.58816, 8.1737)
+use_collision = true
+mesh = SubResource("BoxMesh_pne6x")

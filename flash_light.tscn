@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdub867e6d0y4"]
+
+[ext_resource type="PackedScene" uid="uid://cl62rwel0qehe" path="res://weapons assetes/flash_light/flash_light.glb" id="1_55033"]
+[ext_resource type="Script" path="res://flash_light.gd" id="2_t5amq"]
+
+[node name="flash_light" instance=ExtResource("1_55033")]
+script = ExtResource("2_t5amq")

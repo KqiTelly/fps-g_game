@@ -1,0 +1,269 @@
+[gd_scene load_steps=14 format=3 uid="uid://bcopyojr1w1ks"]
+
+[ext_resource type="PackedScene" uid="uid://cyh1v3q8jipkc" path="res://weapons assetes/glock1.glb" id="1_4r7x2"]
+[ext_resource type="Script" path="res://glock_1.gd" id="2_uyfm3"]
+[ext_resource type="AudioStream" uid="uid://3m7xwdmrr3he" path="res://sounds/9mm-pistol-shot.mp3" id="2_x4e3k"]
+[ext_resource type="Texture2D" uid="uid://u8vif5x8vowm" path="res://assets/kenney_particle-pack/PNG (Transparent)/muzzle_05.png" id="3_3awqy"]
+
+[sub_resource type="Animation" id="Animation_4ax8j"]
+length = 0.001
+step = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.48787e-16, -1.5708, 3.48787e-16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("top:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00678414, -0.0151219, 0.068923)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("flash:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("shell:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("shot:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-27.62]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("shot:pitch_scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.76]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.0545901, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_188x2"]
+resource_name = "kick"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(3.48787e-16, -1.5708, 3.48787e-16), Vector3(3.48787e-16, -1.5708, -0.589921), Vector3(3.48787e-16, -1.5708, 3.48787e-16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("top:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.00678414, -0.0151219, 0.068923), Vector3(0.273577, -0.0172223, 0.068923), Vector3(0.00678414, -0.0151219, 0.068923)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shot:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("flash:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("shell:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.04),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("shot:pitch_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.84]
+}
+
+[sub_resource type="Animation" id="Animation_cmydv"]
+resource_name = "rolede"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0545901, 0), Vector3(2.08165e-12, -0.767, 2.08165e-12), Vector3(0, 0.0545901, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4yny"]
+_data = {
+"RESET": SubResource("Animation_4ax8j"),
+"kick": SubResource("Animation_188x2"),
+"rolede": SubResource("Animation_cmydv")
+}
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2mdcx"]
+gravity = Vector3(2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmvdu"]
+transparency = 1
+albedo_color = Color(1, 0.960784, 0, 1)
+albedo_texture = ExtResource("3_3awqy")
+albedo_texture_force_srgb = true
+albedo_texture_msdf = true
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_t0rc7"]
+material = SubResource("StandardMaterial3D_xmvdu")
+size = Vector2(0.4, 0.4)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u6y48"]
+direction = Vector3(1, -1, -1)
+spread = 20.0
+gravity = Vector3(2.08165e-12, -9.8, 2.08165e-12)
+initial_velocity_min = 5.0
+initial_velocity_max = 86.8
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i1rts"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.2
+
+[node name="glock1" instance=ExtResource("1_4r7x2")]
+transform = Transform3D(-3.61999e-06, -3.48786e-16, -1, 3.48787e-16, 1, -3.48787e-16, 1, -3.48788e-16, -3.61999e-06, 0, 0.0545901, 0)
+script = ExtResource("2_uyfm3")
+rayCast = NodePath("gunray")
+
+[node name="top" parent="." index="1"]
+transform = Transform3D(-2.07727e-09, 0.0568929, 1.3371e-15, -0.0568929, 4.73896e-11, -2.38922e-17, 7.97278e-16, 6.45922e-16, 0.0568929, 0.00678414, -0.0151219, 0.068923)
+
+[node name="Animations" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_p4yny")
+}
+
+[node name="shot" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("2_x4e3k")
+volume_db = -27.62
+pitch_scale = 1.76
+
+[node name="flash" type="GPUParticles3D" parent="." index="4"]
+transform = Transform3D(0.00195475, -0.999998, 4.36259e-08, 0.999998, 0.00195475, -4.37113e-08, 4.36259e-08, 4.37113e-08, 1, -1.04677, 0.409565, 0.0783952)
+amount = 1
+lifetime = 0.1
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_2mdcx")
+draw_pass_1 = SubResource("QuadMesh_t0rc7")
+
+[node name="shell" type="GPUParticles3D" parent="." index="5"]
+transform = Transform3D(-3.90235e-08, -0.0407675, 0.643612, 1.03988, 5.79993e-10, -2.6757e-16, 1.91225e-08, 0.0199771, 1.31343, 0.157692, 0.418076, 0.0202207)
+amount = 1
+lifetime = 0.2
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_u6y48")
+draw_pass_1 = SubResource("CylinderMesh_i1rts")
+
+[node name="gunray" type="RayCast3D" parent="." index="6"]
